@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Web.Api</name>
+    </assembly>
+    <members>
+        <member name="T:Web.Api.Configuration.AutofacExtension">
+             <summary>
+            this extension is obsolete for net core 2.2
+             </summary>
+        </member>
+    </members>
+</doc>
