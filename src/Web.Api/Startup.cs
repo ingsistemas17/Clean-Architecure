@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -16,6 +17,7 @@ using Microsoft.Extensions.Logging;
 using Web.Api.Configuration;
 using Web.Api.Core;
 using Web.Api.Infrastructure;
+using Web.Api.Infrastructure.Data.EntityFramework;
 
 namespace Web.Api
 {
@@ -34,6 +36,9 @@ namespace Web.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add framework services.
+            services.AddDbContext<AppicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+
             services.AddControllers();
 
             services.AddBearerAuthentication(Configuration);
