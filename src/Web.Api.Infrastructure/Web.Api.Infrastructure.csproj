@@ -1,14 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20200306204753_initial.cs" />
-    <Compile Remove="Migrations\20200306204753_initial.Designer.cs" />
-    <Compile Remove="Migrations\20200306224732_initial.cs" />
-    <Compile Remove="Migrations\20200306224732_initial.Designer.cs" />
+    <Compile Remove="Migrations\20200511213901_Initial.cs" />
+    <Compile Remove="Migrations\20200511213901_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200511214428_Initial.cs" />
+    <Compile Remove="Migrations\20200511214428_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200511214635_Initial.cs" />
+    <Compile Remove="Migrations\20200511214635_Initial.Designer.cs" />
+    <Compile Remove="Migrations\20200511214929_Initial.cs" />
+    <Compile Remove="Migrations\20200511214929_Initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
