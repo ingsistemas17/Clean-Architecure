@@ -8,7 +8,7 @@ namespace Web.Api.Core.Entity
 {
 
     [Table("TEST_FACTURA_DETALLE")]
-    public class FacturaDetalle
+    public class FacturaDetalle: BaseEntity
     {
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

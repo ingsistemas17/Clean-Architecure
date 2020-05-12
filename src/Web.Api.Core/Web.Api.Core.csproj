@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\UseCaseRequests\" />
     <Folder Include="Interfaces\Services\" />
-    <Folder Include="Interfaces\UseCases\" />
-    <Folder Include="UseCases\" />
   </ItemGroup>
 
   <ItemGroup>
