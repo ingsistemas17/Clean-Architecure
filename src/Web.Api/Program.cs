@@ -22,6 +22,7 @@ namespace Web.Api
             .UseServiceProviderFactory(new AutofacServiceProviderFactory())
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    //webBuilder.UseUrls("https://*:5002");
                     webBuilder.UseStartup<Startup>();
                 });
     }

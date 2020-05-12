@@ -56,7 +56,8 @@ namespace Web.Api.Controllers
                 {
                     producto.IdProducto,
                     producto.Stock,
-                    producto.ValorUnidad
+                    producto.ValorUnidad,
+                    producto.Nombre
                 });
             }
             catch (Exception e)
