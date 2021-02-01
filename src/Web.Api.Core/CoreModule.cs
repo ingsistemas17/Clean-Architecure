@@ -13,6 +13,7 @@ namespace Web.Api.Core
         {
             builder.RegisterType<LoginUseCase>().As<ILoginUseCase>().InstancePerLifetimeScope();
             builder.RegisterType<VentaUseCase>().As<IVentaUseCase>().InstancePerLifetimeScope();
+            builder.RegisterType<FacturaUseCase>().As<IFacturaUseCase>().InstancePerLifetimeScope();
         }
             
     }
