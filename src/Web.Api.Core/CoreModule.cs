@@ -12,7 +12,6 @@ namespace Web.Api.Core
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterType<LoginUseCase>().As<ILoginUseCase>().InstancePerLifetimeScope();
-            builder.RegisterType<VentaUseCase>().As<IVentaUseCase>().InstancePerLifetimeScope();
             builder.RegisterType<FacturaUseCase>().As<IFacturaUseCase>().InstancePerLifetimeScope();
         }
             

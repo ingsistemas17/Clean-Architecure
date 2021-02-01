@@ -15,13 +15,10 @@ namespace Web.Api.Infrastructure.Data.EntityFramework
         {
         }
 
-        public DbSet<Cliente> Clientes { get; set; }
-
-        public DbSet<Producto> Productos { get; set; }
 
         public DbSet<Factura> Facturas { get; set; }
 
-        public DbSet<FacturaDetalle> FacturaDetalles { get; set; }
+    
 
     }
 }

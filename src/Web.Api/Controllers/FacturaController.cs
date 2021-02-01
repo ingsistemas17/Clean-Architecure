@@ -19,8 +19,8 @@ namespace Web.Api.Controllers
             _facturaUseCase = facturaUseCase;
         }
 
-        [HttpPost("GetAllFactura")]
-        public ActionResult GetAllFactura(AllFacturaRequest allFacture)
+        [HttpPost("GetAllSumFactura")]
+        public ActionResult GetAllSumFactura(AllFacturaRequest allFacture)
         {
             try
             {

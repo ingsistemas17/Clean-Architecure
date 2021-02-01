@@ -12,22 +12,25 @@ namespace Web.Api.Core.Entity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        [Column("IdFactura", TypeName = "numeric(18,0)")]
-        public decimal IdFactura { get; set; }
-
-
-        [ForeignKey("IdCliente")]
-        public Cliente ClienteEntity { get; set; }
-        [Required]
-        [Column("IdCliente", TypeName = "numeric(18,0)")]
-        public decimal IdCliente { get; set; }
+        [Column("IdFacture", TypeName = "numeric(18,0)")]
+        public decimal IdFacture { get; set; }
 
         [Required]
-        public DateTime FechaVenta { get; set; }
+        [MaxLength(20)]
+        public string NIT { get; set; }
 
         [Required]
-        [Column("ValorTotal", TypeName = "numeric(18,3)")]
-        public decimal ValorTotal { get; set; }
+        [MaxLength(100)]
+        public string Descripcion { get; set; }
+
+        [Required]
+        public double ValorTotal { get; set; }
+
+        [Required]
+        public int IVA { get; set; }
+
+        [Required]
+        public double ValorTotalIva { get; set; }
 
     }
 
