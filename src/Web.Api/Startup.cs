@@ -46,7 +46,10 @@ namespace Web.Api
             });
 
             // Add framework services.
-            services.AddDbContext<AppicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<AppicationDbContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultPostgresql")));
+
+            //
+           // services.AddDbContext<AppicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default")));
 
             services.AddControllers();
 
