@@ -18,14 +18,15 @@ namespace Web.Api.Core.Dto.UseCaseRequests
         public int NuPaginas { get; set; }
 
         [Required]
-        [Range(0, int.MaxValue)]
-        public int Genero { get; set; }
+        public string Genero { get; set; }
 
         [Required]
         public long EditorialId { get; set; }
 
         [Required]
         public long AutorId { get; set; }
+
+        public string AutorNombre { get; set; }
 
     }
 }

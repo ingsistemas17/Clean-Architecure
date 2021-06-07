@@ -27,15 +27,18 @@ namespace Web.Api.Infrastructure.Data.Repository
             throw new NotImplementedException();
         }
 
-        public void Delete<T>(decimal id)
+        public void Delete<T>(long id)
         {
             throw new NotImplementedException();
         }
 
-        public T GetById<T>(decimal id)
+        public T GetById<T>(long id) where T : BaseEntity
         {
-            throw new NotImplementedException();
+            var a = _dbContext.Find<T>(id);
+                       
+            return a;
         }
+
 
         public List<T> List<T>() where T : BaseEntity
         {
@@ -45,6 +48,11 @@ namespace Web.Api.Infrastructure.Data.Repository
         {
             _dbContext.Update<T>(entity);
             _dbContext.SaveChanges();
+        }
+
+        public List<Libro> Buscarlibros()
+        {
+            return _dbContext.Libro.Include(a => a.Autor).ToList();
         }
 
     }

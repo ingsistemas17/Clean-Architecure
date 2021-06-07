@@ -95,8 +95,9 @@ namespace Web.Api.Infrastructure.Migrations
                     b.Property<long>("EditorialId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Genero")
-                        .HasColumnType("integer");
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("NuPaginas")
                         .HasColumnType("integer");

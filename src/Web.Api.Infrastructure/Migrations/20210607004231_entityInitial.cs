@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Web.Api.Infrastructure.Migrations
 {
-    public partial class InitialEntities : Migration
+    public partial class entityInitial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -50,7 +50,7 @@ namespace Web.Api.Infrastructure.Migrations
                     Titulo = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Anou = table.Column<int>(type: "integer", nullable: false),
                     NuPaginas = table.Column<int>(type: "integer", nullable: false),
-                    Genero = table.Column<int>(type: "integer", nullable: false),
+                    Genero = table.Column<string>(type: "text", nullable: false),
                     EditorialId = table.Column<long>(type: "bigint", nullable: false),
                     AutorId = table.Column<long>(type: "bigint", nullable: false)
                 },

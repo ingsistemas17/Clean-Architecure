@@ -10,8 +10,8 @@ using Web.Api.Infrastructure.Data.EntityFramework;
 namespace Web.Api.Infrastructure.Migrations
 {
     [DbContext(typeof(AppicationDbContext))]
-    [Migration("20210606223859_InitialEntities")]
-    partial class InitialEntities
+    [Migration("20210607004231_entityInitial")]
+    partial class entityInitial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -97,8 +97,9 @@ namespace Web.Api.Infrastructure.Migrations
                     b.Property<long>("EditorialId")
                         .HasColumnType("bigint");
 
-                    b.Property<int>("Genero")
-                        .HasColumnType("integer");
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<int>("NuPaginas")
                         .HasColumnType("integer");
